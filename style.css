@@ -10,8 +10,7 @@ body{
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 10px;
-    border-bottom: 1px solid #00000010;
+    /* padding: 10px; */
     flex-direction: column;
     width: 100%;
 }
@@ -19,12 +18,41 @@ body{
 .music-row{
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
-    justify-content: center;
+    /* gap: 18px; */
+    justify-content: flex-start;
 
 }
+.playlist-botao{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.playlist-botao img{
+    cursor: pointer;
+    width: 18px;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.top img{
+    padding: 5px;
+    padding: 10px;
+}
+
+.top img:hover{
+    background-color: #27AE60;
+    border-radius: 14px;
+    cursor: pointer;
+    padding: 10px;
+    
+}
+
 .musica h2{
-    font-size: 14px;
+    font-size: 12.5px;
     margin: 5px 0 0 0;
     font-weight: 500;
 }
@@ -36,14 +64,14 @@ body{
 }
 
 .musica .cover{
-    width: 120%;
+    width: 100%;
     border-radius: 10px;
 }
 .musica{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    width: 100px;
+    width: 85px;
     align-items: center;
 }
 .left-section{
@@ -51,6 +79,7 @@ body{
     display: flex;
     flex-direction: column;
     border-right: 1px solid #00000010;
+    padding: 15px;
 }
 .right-section{
     display: flex;
@@ -63,6 +92,7 @@ body{
     flex-direction: column;
     border-right: 1px solid #00000010;
     align-items: center;
+    padding: 15px;
 
 }
 .current-info{
@@ -82,6 +112,9 @@ body{
     width: 5%;
     border-left: 1px solid #00000010;
     background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* height: 100vh; */
 }
 .container{
@@ -93,8 +126,22 @@ body{
 .playlist-item{
     display: flex;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
     cursor: pointer;
+    width: 100%;
+}
+
+.playlist-title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.pnext{
+    font-size: 14px;
+    color: #4f4f4f;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .titulo{
@@ -152,7 +199,7 @@ body{
 }
 
 .playlist-item:hover{
-    background-color: #00000010;
+    background-color: #00000014;
 }
 
 .playlist-item h2{
@@ -168,6 +215,34 @@ body{
 .top-charts{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    /* padding: 10px; */
     /* align-items: center; */
+}
+
+.main{
+    /* width: 100%; */
+    padding: 15px;
+}
+.ptop{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    flex-direction: row;
+}
+
+.ptop p{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.pbaixo{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    flex-direction: row;
+}
+
+.playlist-info{
+    width: 80%;
 }
