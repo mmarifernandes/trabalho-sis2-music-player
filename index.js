@@ -25,17 +25,45 @@ if (volumeBar) {
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
+const themeIconConfig = document.getElementById('config');
+const themeIconLeave = document.getElementById('leave');
+
+const ICON_LIGHT_CONFIG = 'assets/config-white.png';
+const ICON_LIGHT_LEAVE = 'assets/leave-white.png';
+const ICON_DARK_CONFIG = 'assets/config-dark.png';
+const ICON_DARK_LEAVE = 'assets/leave-dark.png';
+
+
+function updateThemeIcons(isDark) {
+    if (themeIconConfig) {
+        themeIconConfig.src = isDark ? ICON_LIGHT_CONFIG : ICON_DARK_CONFIG;
+        themeIconConfig.alt = isDark ? 'Ícone de configurações (modo escuro)' : 'Ícone de configurações (modo claro)';
+    }
+    if (themeIconLeave) {
+        themeIconLeave.src = isDark ? ICON_LIGHT_LEAVE : ICON_DARK_LEAVE;
+        themeIconLeave.alt = isDark ? 'Ícone de sair (modo escuro)' : 'Ícone de sair (modo claro)';
+    }
+}
+
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     body.classList.add(savedTheme);
 }
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+updateThemeIcons(body.classList.contains('dark-mode'));
 
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark-mode');
-    } else {
-        localStorage.removeItem('theme');
-    }
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        const isDark = body.classList.contains('dark-mode');
+        
+        updateThemeIcons(isDark);
+
+        if (isDark) {
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            localStorage.removeItem('theme');
+        }
+    });
+}

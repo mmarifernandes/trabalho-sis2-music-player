@@ -18,6 +18,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 10px;
 
 }
 .playlist-botao{
@@ -77,11 +78,13 @@ body{
     flex-direction: column;
     border-right: 1px solid #00000010;
     padding: 15px;
+    background-color: #ffffff;
 }
 .right-section{
     display: flex;
     flex-direction: column;
     width: 30%;
+    background-color: #ffffff;
 }
 .middle-section{
     width: 40%;
@@ -90,6 +93,7 @@ body{
     border-right: 1px solid #00000010;
     align-items: center;
     padding: 15px;
+    background-color: #FAFAFA;
 
 }
 .current-info{
@@ -394,4 +398,20 @@ body.dark-mode .linha {
 body.dark-mode .top img:hover,
 body.dark-mode .bottom img:hover {
     background-color: #27AE60;
+}
+
+body.dark-mode .playlist-item p {
+    color: #b3b3b3;
+}
+
+body.dark-mode .left-section,
+body.dark-mode .right-section{
+    background-color: #121212;
+}
+body.dark-mode .middle-section{
+    background-color: #121212;
+}
+
+body.dark-mode .bottom img{
+    
 }
