@@ -32,17 +32,20 @@ const ICON_LIGHT_CONFIG = 'assets/config-white.png';
 const ICON_LIGHT_LEAVE = 'assets/leave-white.png';
 const ICON_DARK_CONFIG = 'assets/config-dark.png';
 const ICON_DARK_LEAVE = 'assets/leave-dark.png';
-
+const ICON_SUN= 'assets/sol.png';
+const ICON_MOON= 'assets/Vector (7).png';
 
 function updateThemeIcons(isDark) {
     if (themeIconConfig) {
         themeIconConfig.src = isDark ? ICON_LIGHT_CONFIG : ICON_DARK_CONFIG;
-        themeIconConfig.alt = isDark ? 'Ícone de configurações (modo escuro)' : 'Ícone de configurações (modo claro)';
     }
     if (themeIconLeave) {
         themeIconLeave.src = isDark ? ICON_LIGHT_LEAVE : ICON_DARK_LEAVE;
-        themeIconLeave.alt = isDark ? 'Ícone de sair (modo escuro)' : 'Ícone de sair (modo claro)';
     }
+    if (themeToggle) {
+        themeToggle.src = isDark ? ICON_SUN : ICON_MOON;
+    }
+
 }
 
 const savedTheme = localStorage.getItem('theme');
@@ -67,3 +70,23 @@ if (themeToggle) {
         }
     });
 }
+
+const playButton = document.getElementById('play-button');
+const playIcon = playButton.querySelector('img');
+const musica = new Audio('assets/parachute.mp3');
+musica.volume = 0.01;
+musica.loop = true;
+musica.currentTime = 4
+
+playButton.addEventListener('click', () => {
+    if (musica.paused) {
+        musica.play();
+        playIcon.src = './assets/pause-button.png';
+
+    } else {
+        musica.pause();
+        playIcon.src = './assets/play-button.png';
+    }
+});
+
+

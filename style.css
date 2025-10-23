@@ -43,11 +43,27 @@ body{
 }
 
 .top img:hover{
-    background-color: #27AE60;
+    /* background-color: #27AE60;
     border-radius: 14px;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px; */
+    transform: scale(1.1);
+    cursor: pointer;
     
+}
+.current-cover{
+    width: 25vw;
+    height: 50vh;
+    border-radius: 6px;
+    /* margin-bottom: 15px; */
+}
+
+.playlist-cover{
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .musica h2{
@@ -56,6 +72,15 @@ body{
     font-weight: 500;
 }
 
+.info{
+    width: 100%;
+}
+
+
+.musica .cover{
+    width: 140px;
+    height: 140px;
+}
 .musica p{
     font-size: 12px;
     margin: 2px 0 0 0;
@@ -69,7 +94,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    width: 100px;
+    width: 140px;
     align-items: center;
 }
 .left-section{
@@ -143,6 +168,8 @@ body{
     align-items: center;
     cursor: pointer;
     width: 100%;
+    padding-bottom: 2.5px;
+    padding-top: 2.5px;
 }
 
 .playlist-title{
@@ -337,11 +364,12 @@ body{
     padding: 10px;
 }
 .bottom img:hover{
-    background-color: #27AE60;
+    /* background-color: #27AE60;
     border-radius: 14px;
     cursor: pointer;
-    padding: 10px;
-    
+    padding: 10px; */
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .bottom{
     display: flex;
@@ -397,7 +425,9 @@ body.dark-mode .linha {
 
 body.dark-mode .top img:hover,
 body.dark-mode .bottom img:hover {
-    background-color: #27AE60;
+    transform: scale(1.1);
+    cursor: pointer;
+    
 }
 
 body.dark-mode .playlist-item p {
