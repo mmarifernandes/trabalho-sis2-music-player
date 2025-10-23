@@ -86,6 +86,28 @@ body{
     margin: 2px 0 0 0;
     color: #4f4f4f;
 }
+.musica:hover{
+    transform: scale(1.1);
+}
+
+.prev-button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.next-button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.aleatorio:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.repetir:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 .musica .cover{
     border-radius: 10px;
