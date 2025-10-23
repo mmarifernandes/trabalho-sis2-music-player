@@ -2,7 +2,7 @@
 
 Uma interface de usuário para um player de música desenvolvida com HTML, CSS e JavaScript.
 
-Este projeto foca na criação de um layout responsivo e interativo, incluindo funcionalidades essenciais como controles de reprodução e um tema escuro.
+Este projeto foca na criação de um layout interativo, incluindo funcionalidades essenciais como controles de reprodução e um tema escuro.
 
 ## Funcionalidades
 
