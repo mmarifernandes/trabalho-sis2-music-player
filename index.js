@@ -90,3 +90,21 @@ playButton.addEventListener('click', () => {
 });
 
 
+volumeBar.addEventListener('input', () => {
+    const volumeValue = volumeBar.value;
+    musica.volume = volumeValue / 100;
+});
+progressBar.addEventListener('input', () => {
+    const progressValue = progressBar.value;
+    const duration = musica.duration;
+    musica.currentTime = (progressValue / 100) * duration;
+});
+musica.addEventListener('timeupdate', () => {
+    const currentTime = musica.currentTime;
+    const duration = musica.duration;
+    if (duration > 0) {
+        const progressPercent = (currentTime / duration) * 100;
+        progressBar.value = progressPercent;
+        updateRangeBar(progressBar);
+    }
+});
