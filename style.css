@@ -9,8 +9,7 @@ body{
 .current-music{
     display: flex;
     align-items: center;
-    gap: 15px;
-    /* padding: 10px; */
+    /* gap: 15px; */
     flex-direction: column;
     width: 100%;
 }
@@ -18,8 +17,7 @@ body{
 .music-row{
     display: flex;
     flex-wrap: wrap;
-    /* gap: 18px; */
-    justify-content: flex-start;
+    justify-content: space-around;
 
 }
 .playlist-botao{
@@ -64,14 +62,13 @@ body{
 }
 
 .musica .cover{
-    width: 100%;
     border-radius: 10px;
 }
 .musica{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    width: 85px;
+    width: 100px;
     align-items: center;
 }
 .left-section{
@@ -97,7 +94,19 @@ body{
 }
 .current-info{
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+.action{
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 30px;
+}
+
 .current-nome-musica{
     font-weight: 500;
     font-size: 18px;
@@ -115,18 +124,19 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 100vh; */
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 .container{
     display: flex;
-    height: 100vh;
-    width: 100%;
+    align-items: flex-start;
 }
 
 .playlist-item{
     display: flex;
     align-items: center;
-    /* padding: 10px; */
     cursor: pointer;
     width: 100%;
 }
@@ -155,8 +165,19 @@ body{
     font-size: 16px;
 }
 .titulo-charts{
-    font-weight: 500;
+    font-weight: 600;
         font-size: 16px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 300px;
+}
+.linha{
+    width: 70%;
+    border: 0.5px solid #00000033;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .playbar{
     display: flex;
@@ -215,18 +236,14 @@ body{
 .top-charts{
     display: flex;
     flex-direction: column;
-    /* padding: 10px; */
-    /* align-items: center; */
 }
 
 .main{
-    /* width: 100%; */
     padding: 15px;
 }
 .ptop{
     display: flex;
     justify-content: space-between;
-    /* width: 100%; */
     flex-direction: row;
 }
 
@@ -239,10 +256,142 @@ body{
 .pbaixo{
     display: flex;
     justify-content: space-between;
-    /* width: 100%; */
     flex-direction: row;
 }
 
 .playlist-info{
     width: 80%;
+}
+
+.controls{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.dispositivo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #4f4f4f;
+    background-color: #6fcf9733;
+    border-radius: 300px;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.dispositivo p{
+    margin: 0;
+}
+
+.dispositivo-icon{
+    width: 15px;
+    height: 14px;
+    margin-right: 8px;
+}
+.sound-range{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.volume-bar{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 3px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #27AE60; 
+    cursor: pointer;
+}
+
+.play-button:hover{
+    transform: scale(1.1);
+}
+
+.titulo-maylike{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bottom img{
+    /* margin-bottom: 20px; */
+    padding: 10px;
+}
+.bottom img:hover{
+    background-color: #27AE60;
+    border-radius: 14px;
+    cursor: pointer;
+    padding: 10px;
+    
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-left-color: #ffffff1a;
+}
+
+body.dark-mode .left-section,
+body.dark-mode .middle-section {
+    border-right-color: #ffffff1a;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .musica p,
+body.dark-mode .pnext,
+body.dark-mode .current-artista {
+    color: #b3b3b3;
+}
+
+body.dark-mode .ptop p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .dispositivo {
+    background-color: #333333;
+    color: #b3b3b3;
+}
+
+body.dark-mode .playlist-item:hover {
+    background-color: #ffffff14;
+}
+
+body.dark-mode .linha {
+    border-color: #ffffff33;
+}
+
+body.dark-mode .top img:hover,
+body.dark-mode .bottom img:hover {
+    background-color: #27AE60;
 }
